@@ -68,7 +68,7 @@
 
   	<section role="region">
       <header>
-        <button><span class="icon icon-menu">Voltar</span></button>
+        <button><span class="icon icon-back">Voltar</span></button>
         <menu type="toolbar">
           <button><span class="icon icon-edit">Sair do gruop</span></button>
           <button><span class="icon icon-add">Nova postagem</span></button>
@@ -76,43 +76,7 @@
         <h1>Grupo Hackathon</em></h1>
       </header>
     </section>
-
-
-
-    <section data-type="list">
-      <header>Title</header>
-        <ul>
-          <li>
-            <p>Travis Gray</p>
-          </li>
-          <li>
-            <a href="#">
-              <p>Travis Gray</p>
-              <p>Clickable item</p>
-            </a>
-          </li>
-          <li>
-            <aside class="pack-end">
-              <img alt="placeholder" src="myimage.jpg">
-            </aside>
-            <a href="#">
-              <p>Travis Gray</p>
-              <p>Beginning of message</p>
-            </a>
-          </li>
-        </ul>
-      <header>Another title</header>
-        <ul>
-          <li aria-disabled="true">
-            <aside class="pack-end">
-              <img alt="placeholder" src="myimage.jpg">
-            </aside>
-            <a href="#">
-              <p>Travis Gray</p>
-              <p>Disabled item</p>
-            </a>
-          </li>
-          <li>
+          <!--<li>
             <a href="#">
               <aside data-icon="call-outgoing">
                 asidecall
@@ -123,10 +87,35 @@
                 Mobile
               </p>
             </a>
-          </li>
+          </li>-->
+
+          <!--
+           '<li>'
+            +'<aside class="pack-end">'
+              +'<img alt="photo" src="http://carlosdamascenodesenhos.com.br/wp-content/uploads/2012/12/Dimens%C3%B5es-do-rosto.jpg">'
+            +'</aside>'
+            +'<a href="#">'
+              +'<p>Postando prova de biologia</p>'
+              +'<p>Clique para expandir</p>'
+            +'</a>'
+          +'</li>'
+
+        -->
+    <section data-type="list">          
+        <ul id="listaPostagens">
+                    
         </ul>
-  </section>
+    </section>
 
+    <script type="text/javascript">
+      
+      var str = '<li><aside class="pack-end"><img alt="photo" src="http://carlosdamascenodesenhos.com.br/wp-content/uploads/2012/12/Dimens%C3%B5es-do-rosto.jpg"></aside><a href="#"><p>Postando prova de biologia</p><p>Clique para expandir</p></a></li>';  
+      for(var i=0; i<10; i++){            
+            str += str;
+      };
 
+      document.getElementById('listaPostagens').innerHTML = str;
+      
+    </script>
 </body>
 </html>
