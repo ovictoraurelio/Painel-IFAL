@@ -2,11 +2,130 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Headers</title>
-  <meta name="description" content="APP APP APP"> 
-  <link rel="stylesheet" href="../headers.css"> 
+  <title>Grupo</title>
+  <meta name="description" content="grupo"> 
+  <!-- Building blocks -->
+  <link rel="stylesheet" href="style/action_menu.css">
+  <link rel="stylesheet" href="style/buttons.css">
+  <link rel="stylesheet" href="style/confirm.css">
+  <link rel="stylesheet" href="style/edit_mode.css">
+  <link rel="stylesheet" href="style/headers.css">
+  <link rel="stylesheet" href="style/input_areas.css">
+  <link rel="stylesheet" href="style/status.css">
+  <link rel="stylesheet" href="style/switches.css">
+  <link rel="stylesheet" href="style/drawer.css">
+  <link rel="stylesheet" href="style/lists.css">
+  <link rel="stylesheet" href="style/progress_activity.css">
+  <link rel="stylesheet" href="style/scrolling.css">
+  <link rel="stylesheet" href="style/seekbars.css">
+  <link rel="stylesheet" href="style/tabs.css">
+  <link rel="stylesheet" href="style/toolbars.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="icons/styles/action_icons.css">
+  <link rel="stylesheet" href="icons/styles/media_icons.css">
+  <link rel="stylesheet" href="icons/styles/comms_icons.css">
+  <link rel="stylesheet" href="icons/styles/settings_icons.css">
+
+  <!-- Transitions -->
+  <link rel="stylesheet" href="transitions.css">
+
+  <!-- Util CSS: some extra tricks -->
+  <link rel="stylesheet" href="util.css">
+  <!--<link rel="stylesheet" href="../../elements/gaia-icons/gaia-icons-embedded.css">-->
+
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      background-color: #fff;
+    }
+    body {
+      background: none;
+    }
+
+    h2.bb-docs {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #666;
+      margin: -0.1rem 0 0;
+      background-color: #f5f5f5;
+      padding: 0.4rem 0.4rem 0.4rem 3rem;
+      border: solid 0.1rem #e8e8e8;
+      margin: 3rem 0 1rem;
+    }
+
+    section[role="region"] {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+  </style>
+
 </head>
 <body role="application">
+
+
+  	<section role="region">
+      <header>
+        <button><span class="icon icon-menu">Voltar</span></button>
+        <menu type="toolbar">
+          <button><span class="icon icon-edit">Sair do gruop</span></button>
+          <button><span class="icon icon-add">Nova postagem</span></button>
+        </menu>
+        <h1>Grupo Hackathon</em></h1>
+      </header>
+    </section>
+
+
+
+    <section data-type="list">
+      <header>Title</header>
+        <ul>
+          <li>
+            <p>Travis Gray</p>
+          </li>
+          <li>
+            <a href="#">
+              <p>Travis Gray</p>
+              <p>Clickable item</p>
+            </a>
+          </li>
+          <li>
+            <aside class="pack-end">
+              <img alt="placeholder" src="myimage.jpg">
+            </aside>
+            <a href="#">
+              <p>Travis Gray</p>
+              <p>Beginning of message</p>
+            </a>
+          </li>
+        </ul>
+      <header>Another title</header>
+        <ul>
+          <li aria-disabled="true">
+            <aside class="pack-end">
+              <img alt="placeholder" src="myimage.jpg">
+            </aside>
+            <a href="#">
+              <p>Travis Gray</p>
+              <p>Disabled item</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <aside data-icon="call-outgoing">
+                asidecall
+              </aside>
+              <p>Travis Gray <em>(2)</em></p>
+              <p>
+                <time datetime="17:43">5:43PM</time>
+                Mobile
+              </p>
+            </a>
+          </li>
+        </ul>
+  </section>
 
 
 </body>
