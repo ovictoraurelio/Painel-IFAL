@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Título do seu app</title>
-    <!-- Our CSS -->
-    <link rel="stylesheet"  href="css/" />
-    <!-- Our JS -->
-    <script defer src="js/"></script>
-    <script defer src="js/"></script>
-  </head>
-  <body>
-    
-  </body>
-</html> 
+<head>
+  <meta charset="utf-8">
+  <title>Mural</title>
+  <meta name="description" content="grupo"> 
+  <!-- Building blocks -->
+  <link rel="stylesheet" href="style/action_menu.css">
+  <link rel="stylesheet" href="style/buttons.css">
+  <link rel="stylesheet" href="style/confirm.css">
+  <link rel="stylesheet" href="style/edit_mode.css">
+  <link rel="stylesheet" href="style/headers.css">
+  <link rel="stylesheet" href="style/input_areas.css">
+  <link rel="stylesheet" href="style/status.css">
+  <link rel="stylesheet" href="style/switches.css">
+  <link rel="stylesheet" href="style/drawer.css">
+  <link rel="stylesheet" href="style/lists.css">
+  <link rel="stylesheet" href="style/progress_activity.css">
+  <link rel="stylesheet" href="style/scrolling.css">
+  <link rel="stylesheet" href="style/seekbars.css">
+  <link rel="stylesheet" href="style/tabs.css">
+  <link rel="stylesheet" href="style/toolbars.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="icons/styles/action_icons.css">
+  <link rel="stylesheet" href="icons/styles/media_icons.css">
+  <link rel="stylesheet" href="icons/styles/comms_icons.css">
+  <link rel="stylesheet" href="icons/styles/settings_icons.css">
+
+  <!-- Transitions -->
+  <link rel="stylesheet" href="transitions.css">
+
+  <!-- Util CSS: some extra tricks -->
+  <link rel="stylesheet" href="util.css">
+  <!--<link rel="stylesheet" href="../../elements/gaia-icons/gaia-icons-embedded.css">-->
+
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      background-color: #fff;
+    }
+    body {
+      background: none;
+    }
+
+    h2.bb-docs {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #666;
+      margin: -0.1rem 0 0;
+      background-color: #f5f5f5;
+      padding: 0.4rem 0.4rem 0.4rem 3rem;
+      border: solid 0.1rem #e8e8e8;
+      margin: 3rem 0 1rem;
+    }
+
+    section[role="region"] {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }    
+  </style>
+
+</head>
+<body role="application">
+
+      <section id="groups" role="region" data-position="right">
+        <header class="fixed">
+          <button><span class="icon icon-back">Voltar</span></button>
+          <menu type="toolbar">
+            <button><span class="icon icon-edit">Sair do gruop</span></button>
+            <button><span class="icon icon-add">Nova postagem</span></button>
+          </menu>
+          <h1>Grupo Hackathon</em></h1>          
+        </header>
+        <ul role="tablist" class="bb-tablist" data-type="filter">
+          <li role="tab">
+            <a href="#filter1-1" role="tab">Ultimas postagens</a>                    
+          </li>
+          <li role="tab">
+            <a href="#filter1-2">Atividades mais próximas</a>                    
+          </li>
+        </ul>
+        <section data-type="list">
+          <ul id="listaPostagens">
+          </ul>
+        </section>
+    </section>
+    <script type="text/javascript">
+      
+      //************************************************* ADITIONAL GROUPS, ;/TEST
+      var str = '<li><aside class="pack-end"><img alt="photo" src="http://carlosdamascenodesenhos.com.br/wp-content/uploads/2012/12/Dimens%C3%B5es-do-rosto.jpg"></aside><a href="#"><p>Postando prova de biologia</p><p>Clique para expandir</p></a></li>';  
+      for(var i=0; i<12; i++){            
+            str += str;
+      };
+      document.getElementById('listaPostagens').innerHTML = str;      
+      //************************************************* ADITIONAL GROUPS, ;/TEST ********** END
+    </script>
+</body>
+</html>

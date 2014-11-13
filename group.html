@@ -59,63 +59,43 @@
     section[role="region"] {
       margin-bottom: 1.5rem;
       position: relative;
-    }
+    }    
   </style>
 
 </head>
 <body role="application">
 
-
-  	<section role="region">
-      <header>
-        <button><span class="icon icon-back">Voltar</span></button>
-        <menu type="toolbar">
-          <button><span class="icon icon-edit">Sair do gruop</span></button>
-          <button><span class="icon icon-add">Nova postagem</span></button>
-        </menu>
-        <h1>Grupo Hackathon</em></h1>
-      </header>
-    </section>
-          <!--<li>
-            <a href="#">
-              <aside data-icon="call-outgoing">
-                asidecall
-              </aside>
-              <p>Travis Gray <em>(2)</em></p>
-              <p>
-                <time datetime="17:43">5:43PM</time>
-                Mobile
-              </p>
-            </a>
-          </li>-->
-
-          <!--
-           '<li>'
-            +'<aside class="pack-end">'
-              +'<img alt="photo" src="http://carlosdamascenodesenhos.com.br/wp-content/uploads/2012/12/Dimens%C3%B5es-do-rosto.jpg">'
-            +'</aside>'
-            +'<a href="#">'
-              +'<p>Postando prova de biologia</p>'
-              +'<p>Clique para expandir</p>'
-            +'</a>'
-          +'</li>'
-
-        -->
-    <section data-type="list">          
-        <ul id="listaPostagens">
-                    
+      <section id="groups" role="region" data-position="right">
+        <header class="fixed">
+          <button><span class="icon icon-back">Voltar</span></button>
+          <menu type="toolbar">
+            <button><span class="icon icon-edit">Sair do gruop</span></button>
+            <button><span class="icon icon-add">Nova postagem</span></button>
+          </menu>
+          <h1>Grupo Hackathon</em></h1>          
+        </header>
+        <ul role="tablist" class="bb-tablist" data-type="filter">
+          <li role="tab">
+            <a href="#filter1-1" role="tab">Ultimas postagens</a>                    
+          </li>
+          <li role="tab">
+            <a href="#filter1-2">Atividades mais próximas</a>                    
+          </li>
         </ul>
+        <section data-type="list">
+          <ul id="listaPostagens">
+          </ul>
+        </section>
     </section>
-
     <script type="text/javascript">
       
+      //************************************************* ADITIONAL GROUPS, ;/TEST
       var str = '<li><aside class="pack-end"><img alt="photo" src="http://carlosdamascenodesenhos.com.br/wp-content/uploads/2012/12/Dimens%C3%B5es-do-rosto.jpg"></aside><a href="#"><p>Postando prova de biologia</p><p>Clique para expandir</p></a></li>';  
-      for(var i=0; i<10; i++){            
+      for(var i=0; i<12; i++){            
             str += str;
       };
-
-      document.getElementById('listaPostagens').innerHTML = str;
-      
+      document.getElementById('listaPostagens').innerHTML = str;      
+      //************************************************* ADITIONAL GROUPS, ;/TEST ********** END
     </script>
 </body>
 </html>
