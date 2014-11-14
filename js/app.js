@@ -35,22 +35,22 @@ var usuario = {
 	},
 
 	logar : function(){
-		$.ajax({
-
-			url : url + "/token/new.json",
-			type : "POST",
-			data : "username=" + $("#email").val() + "&password=" + $("#senha").val(),
-			success : function(data){
-				usuario.token = data['token'];
-				usuario._id = data['user_id'];
-				config();
-			},
-			error : function(data){
-				alert("" + data.errors);
-			}
-		});
+		if($("#email").val() != "" && $("#senha").val() != ""){
+				$.ajax({
+					url : url + "/token/new.json",
+					type : "POST",
+					data : "username=" + $("#email").val() + "&password=" + $("#senha").val(),
+					success : function(data){
+						usuario.token = data['token'];
+						usuario._id = data['user_id'];
+						config();
+					},
+					error : function(data){
+						alert("Erro ao logar!");
+					}
+				});
+		}
 	}
-
 };
 
 var turma = {
@@ -77,6 +77,13 @@ function config(){
 		});
 }
 
-$(document).ready(function(){
+var init = {
+	bind : function(){
+		$("#entrar").click(usuario.logar);
+	}
+};
 
+
+$(document).ready(function(){
+		init.bind();
 });
