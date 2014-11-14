@@ -22,7 +22,25 @@ var usuario = {
 	token : '', _id : '',
 
 	criar : function(){
-
+		if($("#senha").val() && $("#senha_confimar").val() && $("#nome").val() && $("#email").val()){
+				if($("#senha").val() != $("#senha_confimar").val()){
+					alert("Senhas não correspondem");
+				}else{
+					$.ajax({
+						url : url + "/usuarios/",
+						type : "POST",
+						data : {username : $("#nome").val(), email : $("#email").val(), password : $("#senha").val()},
+						success : function(data){
+							usuario.token = data['token'];
+							usuario._id = data['user_id'];
+							config();
+						},
+						error : function(data){
+							alert("Erro ao logar!");
+						}
+					});
+				}	
+		}
 	},
 
 	listar : function(){
@@ -80,6 +98,7 @@ function config(){
 var init = {
 	bind : function(){
 		$("#entrar").click(usuario.logar);
+		$("#cadastrar-usuario").click(usuario.criar);
 	}
 };
 
